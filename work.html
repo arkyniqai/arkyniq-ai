@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — Arkyniq</title>
+<meta name="description" content="Case study: The Arkyniq Lead Management System — a deep technical breakdown of how we engineer AI-powered lead operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#2AA89C"/><stop offset="1" stop-color="#1E5F94"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M8 11h7M8 16h10M8 21h8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="11" r="2" fill="#fff"/><circle cx="21" cy="16" r="2" fill="#fff"/><circle cx="19" cy="21" r="2" fill="#fff"/></svg>
+      </span>
+      <span class="logo-text">arkyniq</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="work.html" class="nav-link active">Our Work</a>
+      <a href="contact.html" class="nav-cta">Start a Project</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+
+<section class="case-hero">
+  <div class="container">
+    <div class="eyebrow reveal">Case Study · Flagship System</div>
+    <h1 class="reveal" style="--d:.08s">
+      The Arkyniq Lead Management System.
+    </h1>
+    <p class="case-hero-sub reveal" style="--d:.18s">
+      A deep look at how we engineered an end-to-end lead capture, qualification, and follow-up system that cuts manual work by over 80% and responds to every incoming lead in under two minutes.
+    </p>
+    <div class="case-meta reveal-up" style="--d:.3s">
+      <div class="case-meta-item">
+        <div class="case-meta-label">Category</div>
+        <div class="case-meta-value">Sales Automation</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="case-meta-label">Built For</div>
+        <div class="case-meta-value">Mid-sized Businesses</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="case-meta-label">Stack</div>
+        <div class="case-meta-value">n8n · Claude · Apollo</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="case-meta-label">Deployment</div>
+        <div class="case-meta-value">5–7 Days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container">
+    <div class="case-grid">
+      <div class="case-label reveal-up">The Problem</div>
+      <div class="case-body reveal-up" style="--d:.1s">
+        <h2>Every mid-sized business is losing leads they never even see.</h2>
+        <p>Businesses running ads, inbound forms, and listings on multiple platforms generate hundreds of leads per month. In most companies, these leads flow into a fragmented mix of inboxes, spreadsheets, and CRMs — where sales teams manually triage, qualify, and follow up.</p>
+        <p>The result is predictable: response times stretch into hours, unqualified leads consume agent bandwidth, and a majority of cold leads are never re-engaged. The real cost isn't the leads that close slowly — it's the leads that simply vanish into the operational gap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section" style="background: var(--bg-cream);">
+  <div class="container">
+    <div class="case-grid">
+      <div class="case-label reveal-up">The System</div>
+      <div class="case-body reveal-up" style="--d:.1s">
+        <h2>A six-phase pipeline. Fully automated. Production-grade.</h2>
+        <p>We designed a modular lead operations system built on n8n, integrated with AI scoring, enrichment APIs, and multi-channel outreach tools. Every phase is independently monitored, with automated error handling and re-try logic built in.</p>
+
+        <div class="architecture-diagram">
+          <div class="flow-phases">
+            <div class="flow-phase">
+              <div class="flow-phase-label">Phase 01<strong>Trigger</strong></div>
+              <div class="flow-boxes">
+                <div class="flow-box accent">
+                  <div class="flow-box-title">Schedule Trigger</div>
+                  <div class="flow-box-sub">Runs every 24h · on demand</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <div class="flow-phase-label">Phase 02<strong>Scrape</strong></div>
+              <div class="flow-boxes">
+                <div class="flow-box">
+                  <div class="flow-box-title">LinkedIn Scraper</div>
+                  <div class="flow-box-sub">Phantombuster · Apify</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Apollo.io API</div>
+                  <div class="flow-box-sub">Contacts by filters</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Web / Maps Scrape</div>
+                  <div class="flow-box-sub">Apify · Bright Data</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <div class="flow-phase-label">Phase 03<strong>Enrich</strong></div>
+              <div class="flow-boxes">
+                <div class="flow-box">
+                  <div class="flow-box-title">Find Email</div>
+                  <div class="flow-box-sub">Hunter.io · Snov.io</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Enrich Company Data</div>
+                  <div class="flow-box-sub">Clearbit · Apollo</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Verify Email</div>
+                  <div class="flow-box-sub">ZeroBounce · NeverBounce</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <div class="flow-phase-label">Phase 04<strong>Qualify</strong></div>
+              <div class="flow-boxes">
+                <div class="flow-box teal">
+                  <div class="flow-box-title">AI Lead Scoring</div>
+                  <div class="flow-box-sub">Claude · GPT-4 via HTTP node</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <div class="flow-phase-label">Phase 05<strong>Route</strong></div>
+              <div class="flow-boxes">
+                <div class="flow-box accent">
+                  <div class="flow-box-title">Hot Lead Branch</div>
+                  <div class="flow-box-sub">Score ≥ threshold</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Cold / Nurture</div>
+                  <div class="flow-box-sub">Re-engagement queue</div>
+                </div>
+              </div>
+            </div>
+            <div class="flow-phase">
+              <div class="flow-phase-label">Phase 06<strong>Deploy</strong></div>
+              <div class="flow-boxes">
+                <div class="flow-box">
+                  <div class="flow-box-title">Email Outreach</div>
+                  <div class="flow-box-sub">Instantly · Lemlist</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Push to CRM</div>
+                  <div class="flow-box-sub">HubSpot · Pipedrive</div>
+                </div>
+                <div class="flow-box">
+                  <div class="flow-box-title">Log to Database</div>
+                  <div class="flow-box-sub">Google Sheets · Airtable</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container">
+    <div class="case-grid">
+      <div class="case-label reveal-up">The Approach</div>
+      <div class="case-body reveal-up" style="--d:.1s">
+        <h2>Engineered for reliability, not just function.</h2>
+        <p>Anyone can stitch together a no-code automation that works on a good day. Production systems fail on bad days — so we designed for the bad days first.</p>
+        <p>Every integration has explicit error handling, every AI call has fallback logic, every external API call has retry policies, and the entire system has end-to-end observability. The result is a workflow that runs reliably in the background without constant babysitting.</p>
+        <p>On top of that, the scoring logic is transparent and tunable. Business owners can adjust qualification criteria without touching code — a prompt-based control layer makes the system as flexible as the team using it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section" style="background: var(--bg-cream);">
+  <div class="container">
+    <div class="case-grid">
+      <div class="case-label reveal-up">Expected Outcomes</div>
+      <div class="case-body reveal-up" style="--d:.1s">
+        <h2>What this system is engineered to deliver.</h2>
+        <p>These are the target benchmarks the system is architected to hit in a typical mid-sized business deployment. Actual results depend on current lead volume, quality of existing data, and team adoption — but the engineering is built to these specs from day one.</p>
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-num">&lt; 2 min</div>
+            <div class="result-text">Average first response time to every new qualified lead</div>
+          </div>
+          <div class="result-card">
+            <div class="result-num">80%+</div>
+            <div class="result-text">Reduction in manual qualification work for the sales team</div>
+          </div>
+          <div class="result-card">
+            <div class="result-num">24/7</div>
+            <div class="result-text">Always-on lead capture and follow-up, including weekends and holidays</div>
+          </div>
+          <div class="result-card">
+            <div class="result-num">3×</div>
+            <div class="result-text">Typical increase in cold-lead re-engagement rate</div>
+          </div>
+          <div class="result-card">
+            <div class="result-num">100%</div>
+            <div class="result-text">Lead tracking coverage across every capture source</div>
+          </div>
+          <div class="result-card">
+            <div class="result-num">5–7 days</div>
+            <div class="result-text">From kickoff to a live, integrated, running system</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="container">
+    <div class="case-grid">
+      <div class="case-label reveal-up">Trust Signals</div>
+      <div class="case-body reveal-up" style="--d:.1s">
+        <h2>Why this case study instead of testimonials.</h2>
+        <p>We're early. We're not going to pretend we have 50 logos to display or invent quotes from fictional happy clients. What we do have is a real, functional system engineered to specific outcomes — and the confidence to show you exactly how it's built.</p>
+        <p>The testimonials will come. Until then, the architecture itself is the proof — and we'd rather you evaluate us on what we've built than what we claim.</p>
+        <p>If you want to see this system deployed for your business, we're currently accepting founding clients at preferred rates in exchange for permission to document the results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="container">
+    <div class="final-inner reveal-up">
+      <h2>Ready to see this system<br>running in your business?</h2>
+      <p>Book a diagnostic call. We'll map your current lead flow and show you exactly where automation creates the biggest impact.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">
+        <span>Book a Diagnostic Call</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo-mark">
+        <svg viewBox="0 0 32 32" width="24" height="24" fill="none"><defs><linearGradient id="lg2" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#2AA89C"/><stop offset="1" stop-color="#1E5F94"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg2)"/><path d="M8 11h7M8 16h10M8 21h8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="11" r="2" fill="#fff"/><circle cx="21" cy="16" r="2" fill="#fff"/><circle cx="19" cy="21" r="2" fill="#fff"/></svg>
+      </div>
+      <span>arkyniq</span>
+    </div>
+    <div class="footer-nav">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Our Work</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:arkyniqai@gmail.com">arkyniqai@gmail.com</a>
+      <a href="https://wa.me/917989714235" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <div>© 2026 Arkyniq. Engineering intelligent systems.</div>
+    <div>Built with precision.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
